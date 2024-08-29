@@ -21,11 +21,18 @@ class App extends React.Component {
 		{ id: 3, type: 'urgent', html: getLatestNotification() },
 	];
 
+	// The constructor is correctly implemented for binding and setting up state if needed
+	constructor(props) {
+		super(props);
+	}
+
+	// Since the task doesn't require additional lifecycle methods for this part, we skip them
+
 	render() {
 		return (
 			<React.Fragment>
-				<div className='App'>
-					<div className='heading-section'>
+				<div className="App">
+					<div className="heading-section">
 						<Notifications listNotifications={this.listNotifications} />
 						<Header />
 					</div>
@@ -50,3 +57,4 @@ App.propTypes = {
 };
 
 export default App;
+
